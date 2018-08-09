@@ -1,0 +1,29 @@
+body{
+	min-height: 100vh
+	background-color:#CCC;
+	background-image: url('https://unsplash.it/g/1500/800?random') /*g: tudo em escala de cinza, 1500x800, random: as fotos são alteradas randomicamente*/
+
+
+}
+
+.login-form{
+	margin-top: 50vh; 
+	padding: 20px/*em cima e embaixo*/ 30px /*laterais*/ ; /*espaçamento interno*/
+	background-color: rgba(0,0,0,.9);
+	color: #FFF; /*cor da fonte padrão*/
+
+
+	transform: translateY(-50%); /* Traduz a posição vertical(Y) do elemento para metade do tamanho que ele tiver.. 
+									assim não importa o tamanho da div, ele sempre vai centralizar o elemento*/
+} 
+
+.login-form h1{
+	margin:0 0 5px; /* 0 cima*/ /* 0 direita e esquerda*/ /* 5 baixo*/
+}
+
+.login-form h2{
+	margin: 0 0 30px;
+	font-size: 1em;
+}
+
+}

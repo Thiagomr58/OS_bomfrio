@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout-principal}"> <!-- Chamo o layput padrão -->
+
+<body>
+
+<section layout:fragment="conteudo"> <!-- Defino que tudo dentro dessa section, apareça dentro da section da view layout-padrao -->
+
+
+<div class="page-header">
+	<div class="container-fluid">
+		<h1>
+			Clientes
+		</h1>
+	</div>
+</div>
+
+
+<div class="container">
+		<div class="table-responsive">
+	 	<table class="dados-os table table-striped table-bordered table-hover">
+	 		<thead>
+	 			<tr>
+	 				<th>cod.</th>
+	 				<th>Data</th>
+	 				<th>Cliente</th>
+	 				<th>Valor</th>
+	 				<th>Funcionário</th>
+	 				<th>Status</th>
+	 				<th></th>
+	 			</tr>
+	 		</thead>
+	 		<tbody>
+	 			<tr>
+	 				<td>51351</td>
+	 				<td>05/05/2015</td>
+	 				<td>Gandalf Cinzento</td>
+	 				<td>800,00</td>
+	 				<td>Jorge</td>
+	 				<td><span class="label label-primary">Em andamento</span></td>
+	 				<td class="text-center">
+	 					<a href="#" data-toggle="tooltip" title="Finalizar"><span class="glyphicon glyphicon-ok text-success"></span></a>
+	 					<a href="#" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-pencil text-warning"></span></a>
+	 					<a href="#" data-toggle="tooltip" title="Excluir"><span class="glyphicon glyphicon-trash text-danger"></span></a>
+	 				</td>
+	 			</tr>	
+	 			
+	 		</tbody>
+	 	</table>
+	   </div>
+	<footer class="row">
+	   	<div class="col-sm-6">
+	   		<button class="btn btn-primary" data-toggle="modal" data-target="#novoCliente">Cadastrar Cliente</button>
+	   	</div>
+	   	<div class="col-sm-6 paginacao text-right">
+	   		<ul class="pagination">
+	   			<li class="disabled"><a href=""><span><<</span></a></li>
+	   			<li class="active"><a href="">1</a></li>
+	   			<li><a href="">2</a></li>
+	   			<li><a href="">3</a></li>
+	   			<li><a href="">4</a></li>
+	   			<li><a href="">5</a></li>
+	   			<li><a href=""><span>>></span></a></li>
+	   		</ul>
+	   	</div>
+	   </footer>
+</div>
+
+<div class="modal fade" id="novoCliente">
+	 	<div class="modal-dialog">
+	 		<div class="modal-content">
+	 			<div class="modal-header">
+	 				<button type="button" data-dismiss="modal" class="close">
+	 					<span>&times;</span>
+	 				</button>
+	 				<h4 class="modal-title">Cadastro de Cliente</h4>
+	 			</div>
+	 			<form>
+	 				<div class="modal-body">
+<!-- 	 					<div class="alert alert-warning"> -->
+<!-- 	 						<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button> -->
+<!-- 	 						<b>Ocorreu um ERRO!</b> Confira se você preencheu todos os campos. -->
+<!-- 	 					</div> -->
+	 					<div class="row">
+	 						<div class="form-group col-xs-12">
+	 							<label>Código da OS</label>
+	 							<p class="form-control-static">65151</p>
+	 						</div>
+	 					</div>
+	 						<div class="row">
+	 							<div class="form-group col-sm-12">
+	 								<label class="control-label" for="Cliente">Nome</label>
+	 								<input class="form-control" id="nome" type="text"/>
+	 							</div>
+	 						</div>
+	 						<div class="row">
+								<div class="form-group col-sm-12">
+									<label class="control-label" for="endereco">Endereço</label>
+									<input class="form-control" id="endereco" type="text"/>
+								</div>	 						
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-6">
+									<label class="control-label" for="telefone">Telefone</label>
+									<input class="form-control" id="telefone" type="text"/>
+								</div>
+								<div class="form-group col-sm-6">
+									<label class="control-label" for="cidade">Cidade</label>
+									<input class="form-control" id="cidade" type="text"/>
+								</div>
+	 						</div>
+	 						
+	 						<div class="row">
+	 							<div class="form-group col-xs-12">
+	 								<label class="control-label" for="email">E-mail</label>
+	 								<input type="email" id="email" class="form-control" />
+	 								
+	 							</div>
+	 						</div>
+	 				   </div> 	
+	 				<div class="modal-footer">
+	 					<button type="reset" class="btn btn-danger">Limpar</button>
+	 					<button type="submit" class="btn btn-primary">Salvar</button>
+	 				</div>
+	 			</form>
+	 		</div>
+	 	</div>
+	 </div>
+<!-- 
+
+<div class="container-fluid">
+	<form method="POST" class="form-vertical  js-form-loading" >
+	
+		<input type="hidden"  /> 
+	
+		<div class="form-group">
+			<label for="nome">Nome</label>
+			<input id="nome" type="text" class="form-control" />
+		</div>
+		
+		<div class="form-group">
+			<label for="endereco">Endereço</label>
+			<input id="endereco" type="text" class="form-control"/> 
+		</div>
+		
+		<div class="form-group">
+			<label for="telefone">Telefone</label>
+			<input id="telefone" type="text" class="form-control"/>
+		</div>
+		
+		<div class="form-group">
+			<label for="cidade">Cidade</label>
+			<input id="cidade" type="text" class="form-control"/>
+		</div>
+		
+		<div class="form-group">
+			<label for="email">E-mail</label>
+			<input id="email" type="text" class="form-control"/>
+		</div>
+	
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="tipo">Tipo</label>
+					<select id="tipo" class="form-control"  >
+						<option value="">Selecione o tipo</option>
+						<option>1</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="valor">Valor</label>
+					<input id="valor" type="text" class="form-control js-moeda"  />
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<button class="btn  btn-primary" type="submit">Salvar</button>
+		</div>
+
+	</form>
+</div>
+
+ -->
+	</section>
+ 
+
+</body>
+</html>

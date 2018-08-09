@@ -1,0 +1,64 @@
+.logotipo{
+	padding: 10px; /*centralizando a imagem no nav*/
+	margin-right: 20px; /* colocando um espaçamento de 20px do proximo conteudo, que no caso será o menu*/
+}
+
+.logotipo img{
+	height: 30px; /*alterando a altura da imagem*/
+
+}
+
+.perfil{
+	padding: 10px;
+	width: 300px;
+
+}
+
+.perfil li:first-child{ /*pega o primeiro li*/
+	font-size: 1.3em; /* 1.3 vezes o tamanho da fonte do pai dele*/
+	font-weight: bold;
+	margin-bottom: 2px;
+
+}
+
+.cabecalho h1{
+	margin:0;
+	font-size: 3em;
+}
+
+.busca{
+	margin-top: 12px;
+}
+
+.dados-os{
+	margin-top: 30px;
+}
+
+.paginacao .pagination{
+	margin:0;
+}
+
+@media (max-width: 767px){
+	.perfil{
+		color: #FFF;
+	}
+
+	.perfil a {
+		color:#9d9d9d;
+		display: block;
+		padding: 5px 0;
+	}
+
+	.perfil a:hover{
+		text-decoration: none;
+		color: #FFF;
+	}
+	
+	.paginacao{
+		text-align:center;
+	}
+
+	.paginacao .pagination{
+		margin-top: 20px;
+	}
+}
